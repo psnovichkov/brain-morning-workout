@@ -4,13 +4,7 @@ import ds.node.Node;
 
 public class _Stack {
 	Node top;
-	
-	public void push(int data) {
-		Node node = new Node(data);
-		node.next = top;
-		top = node;
-	}  
-	
+		
 	public boolean isEmpty() {
 		return top == null;
 	}
@@ -25,5 +19,11 @@ public class _Stack {
 		top = top.next;
 		return data;
 	}
+	
+	public void push(int data) {
+		Node node = new Node(data);
+		node.next = top;
+		top = node;
+	}  	
 
 }
