@@ -23,7 +23,7 @@ public class E_Stack_03 {
     }
 
     public int poll(){
-        int data = top.data();
+        int data = top.data;
         top = top.next;
         return data;
     }
