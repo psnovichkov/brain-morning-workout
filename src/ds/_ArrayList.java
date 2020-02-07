@@ -1,5 +1,7 @@
 package ds;
 
+import java.util.ArrayList;
+
 public class _ArrayList {
 	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2; 	
@@ -8,6 +10,8 @@ public class _ArrayList {
 	private int capacity;
 	private int size;	
 
+	
+	
 	public _ArrayList(int capacity) {
 		this.capacity = capacity;
 		this.values = new int[capacity];
