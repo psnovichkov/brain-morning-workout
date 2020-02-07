@@ -7,7 +7,7 @@ package ds;
  * @author georgezakharov
  */
 
-public class G_ArrayList {
+public class G_ArrayList_01 {
 
     private static int DEFAULT_CAPACITY = 100;
     private static int EXPAND_FACTOR = 2;
@@ -16,7 +16,7 @@ public class G_ArrayList {
     public int size;
     public int[] values;
 
-    G_ArrayList(int capacity) {
+    G_ArrayList_01(int capacity) {
 
         size = 0;
         this.capacity = capacity;
@@ -24,7 +24,7 @@ public class G_ArrayList {
     }
 
 
-    G_ArrayList() {
+    G_ArrayList_01() {
         this(DEFAULT_CAPACITY);
     }
 
