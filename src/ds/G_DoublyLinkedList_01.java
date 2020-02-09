@@ -9,7 +9,7 @@ import ds.node.DLNode;
  * @author georgezakharov
  */
 
-public class G_DoublyLinkedList {
+public class G_DoublyLinkedList_01 {
 
 
     DLNode first;
