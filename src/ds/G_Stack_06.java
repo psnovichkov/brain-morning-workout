@@ -29,6 +29,7 @@ public class G_Stack_06 {
 
         node.next = top;
         top = node;
+
     }
 
 
