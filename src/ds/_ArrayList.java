@@ -1,8 +1,7 @@
 package ds;
 
-import java.util.ArrayList;
-
 public class _ArrayList {
+
 	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2; 	
 	
@@ -45,4 +44,5 @@ public class _ArrayList {
 			values = temp;			
 		}
 	}
+
 }

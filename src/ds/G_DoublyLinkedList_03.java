@@ -4,17 +4,15 @@ package ds;
 import ds.node.DLNode;
 
 /**
- * time: 9:21
+ * time: 7:19
  *
  * @author georgezakharov
  */
 
-public class G_DoublyLinkedList {
-
+public class G_DoublyLinkedList_03 {
 
     DLNode first;
     DLNode last;
-
 
     public boolean isEmpty() {
         return first == null;
@@ -22,13 +20,15 @@ public class G_DoublyLinkedList {
 
     public int peekFirst() {
 
-        if (isEmpty()) throw new RuntimeException("Doubly LinkedList Empty");
+        if (isEmpty()) throw new RuntimeException("DL List is empty");
+
         return first.data;
     }
 
     public int peekLast() {
 
-        if (isEmpty()) throw new RuntimeException("Doubly LinkedList Empty");
+        if (isEmpty()) throw new RuntimeException("DL List is empty");
+
         return last.data;
     }
 
@@ -36,14 +36,14 @@ public class G_DoublyLinkedList {
 
         int data = peekFirst();
 
-        if (first.next == null) {
+        if (first == last) {
+
             first = null;
             last = null;
         } else {
             first.next.prev = null;
             first = first.next;
         }
-
         return data;
     }
 
@@ -51,7 +51,8 @@ public class G_DoublyLinkedList {
 
         int data = peekLast();
 
-        if (first.next == null) {
+        if (first == last) {
+
             first = null;
             last = null;
         } else {
@@ -60,6 +61,7 @@ public class G_DoublyLinkedList {
         }
         return data;
     }
+
 
     public void addFirst(int data) {
 
@@ -73,6 +75,8 @@ public class G_DoublyLinkedList {
             first.prev = node;
             first = node;
         }
+
+
     }
 
     public void addLast(int data) {
@@ -83,23 +87,24 @@ public class G_DoublyLinkedList {
             first = node;
             last = node;
         } else {
+
             node.prev = last;
             last.next = node;
             last = node;
         }
-    }
 
+    }
 
     public int peek() {
         return peekFirst();
     }
 
     public void add(int data) {
-        addFirst(data);
+        addLast(data);
     }
 
     public int remove() {
-        return removeLast();
+        return removeFirst();
     }
 
 
