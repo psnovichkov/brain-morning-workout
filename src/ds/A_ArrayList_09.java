@@ -1,23 +1,23 @@
 package ds;
 
-// Time: 2:53
+// 2:20
 
-public class A_ArrayList_04 {
+public class A_ArrayList_09 {
 
 	private final static int DEFAULT_CAPACITY = 100;
-	private final static int EXPAND_FACTOR = 2;
+	private final static int EXPAND_FACTOR =2;
 	
 	private int[] values;
 	private int capacity;
 	private int size;
 	
-	public A_ArrayList_04(int capacity) {
+	public A_ArrayList_09(int capacity) {
 		this.capacity = capacity;
-		this.values = new int[capacity];
-		this.size = 0;
+		values = new int[capacity];
+		size = 0;
 	}
 	
-	public A_ArrayList_04() {
+	public A_ArrayList_09() {
 		this(DEFAULT_CAPACITY);
 	}
 	
@@ -27,8 +27,8 @@ public class A_ArrayList_04 {
 	
 	public void add(int v) {
 		ensureCapacity();
-		values[size] = v;
-		size ++;
+		values[size] =v;
+		size++;
 	}
 	
 	public int get(int index) {
@@ -36,7 +36,7 @@ public class A_ArrayList_04 {
 		return values[index];
 	}
 	
-	private void ensureCapacity() {
+	public void ensureCapacity() {
 		if(size == capacity) {
 			capacity *= EXPAND_FACTOR;
 			int[] tmp = new int[capacity];

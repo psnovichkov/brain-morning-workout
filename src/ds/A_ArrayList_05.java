@@ -1,42 +1,40 @@
 package ds;
 
-// Time: 2:53
+public class A_ArrayList_05 {
 
-public class A_ArrayList_04 {
-
-	private final static int DEFAULT_CAPACITY = 100;
-	private final static int EXPAND_FACTOR = 2;
+	public final static int DEFAULT_CAPACITY = 100;
+	public final static int EXPAND_FACTOR = 2;
 	
 	private int[] values;
 	private int capacity;
 	private int size;
 	
-	public A_ArrayList_04(int capacity) {
+	public A_ArrayList_05(int capacity) {
 		this.capacity = capacity;
 		this.values = new int[capacity];
 		this.size = 0;
 	}
 	
-	public A_ArrayList_04() {
+	public A_ArrayList_05() {
 		this(DEFAULT_CAPACITY);
 	}
 	
 	public int size() {
-		return size;
+		return this.size;
 	}
 	
 	public void add(int v) {
-		ensureCapacity();
+		ensureCapcity();
 		values[size] = v;
 		size ++;
 	}
 	
 	public int get(int index) {
-		if(index > size || index < 0) throw new IndexOutOfBoundsException("Index is out of bounds: " + index);
+		if(index > size || index < 0) throw new IndexOutOfBoundsException("Index out of bounds: " + index);
 		return values[index];
-	}
+	} 
 	
-	private void ensureCapacity() {
+	public void ensureCapcity() {
 		if(size == capacity) {
 			capacity *= EXPAND_FACTOR;
 			int[] tmp = new int[capacity];
@@ -44,5 +42,4 @@ public class A_ArrayList_04 {
 			values = tmp;
 		}
 	}
-	
 }
