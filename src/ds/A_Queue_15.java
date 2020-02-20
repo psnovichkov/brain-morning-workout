@@ -2,19 +2,19 @@ package ds;
 
 import ds.node.Node;
 
-// Time: 1:25
+// 1:19
 
-public class A_Queue_09 {
+public class A_Queue_15 {
 
 	Node top;
 	Node bottom;
 	
 	public boolean isEmpty() {
-		return top==null;
+		return top == null;
 	}
 	
 	public int peek() {
-		if(isEmpty()) throw new RuntimeException("Queue is empty");
+		if(isEmpty()) throw new RuntimeException("Queue is eopty");
 		return top.data;
 	}
 	
@@ -22,21 +22,20 @@ public class A_Queue_09 {
 		int v = peek();
 		if(top == bottom) {
 			top = null;
-			bottom= null;
+			bottom = null;
 		}else {
 			top = top.next;
 		}
-		
 		return v;
 	}
 	
-	public void add(int v) {
+	public void push(int v) {
 		Node node = new Node(v);
 		if(isEmpty()) {
 			top = node;
 			bottom = node;
 		}else {
-			node.next = bottom;
+			bottom.next = node;
 			bottom = node;
 		}
 	}

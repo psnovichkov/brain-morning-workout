@@ -2,9 +2,7 @@ package ds;
 
 import ds.node.Node;
 
-// Time: 1:25
-
-public class A_Queue_09 {
+public class A_Queue_11 {
 
 	Node top;
 	Node bottom;
@@ -22,11 +20,10 @@ public class A_Queue_09 {
 		int v = peek();
 		if(top == bottom) {
 			top = null;
-			bottom= null;
+			bottom = null;
 		}else {
 			top = top.next;
 		}
-		
 		return v;
 	}
 	
@@ -36,10 +33,9 @@ public class A_Queue_09 {
 			top = node;
 			bottom = node;
 		}else {
-			node.next = bottom;
+			bottom.next = node;
 			bottom = node;
 		}
 	}
-	
 	
 }
