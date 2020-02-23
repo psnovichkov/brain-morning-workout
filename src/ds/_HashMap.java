@@ -26,7 +26,7 @@ public class _HashMap<K,V> {
 	@SuppressWarnings("unchecked")
 	public _HashMap(int capacity) {			
 		this.capacity = capacity;
-		this.items = new Item[this.capacity];
+		this.items = new Item[capacity];
 	}
 	
 	public int size() {
