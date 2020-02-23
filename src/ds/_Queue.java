@@ -11,7 +11,7 @@ public class _Queue {
 	}
 	
 	public int peek() {
-		if(first == null) throw new RuntimeException( "Queue is empty");
+		if(isEmpty()) throw new RuntimeException( "Queue is empty");
 		return first.data;
 	}
 	
