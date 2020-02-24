@@ -1,6 +1,8 @@
 package ds;
 
 public class _HashMap<K,V> {
+	public static final int DEFAULT_CAPACITY = 1000;
+	
 	static class Item<K,V> {
 		K key;
 		V value;
@@ -18,13 +20,13 @@ public class _HashMap<K,V> {
 	
 	
 	public _HashMap() {
-		this(1000);
+		this(DEFAULT_CAPACITY);
 	}
 	
 	@SuppressWarnings("unchecked")
 	public _HashMap(int capacity) {			
 		this.capacity = capacity;
-		this.items = new Item[this.capacity];
+		this.items = new Item[capacity];
 	}
 	
 	public int size() {

@@ -2,16 +2,24 @@ package ds;
 
 import ds.node.Node;
 
-public class _Queue {
-	Node first;
-	Node last;
+/**
+ * 
+ * start 2:35
+ * end   2:38:15
+ * 
+ * @author psnovichkov
+ *
+ */
+public class P_Queue_03 {
+	private Node first;
+	private Node last;
 	
 	public boolean isEmpty() {
 		return first == null;
 	}
 	
 	public int peek() {
-		if(isEmpty()) throw new RuntimeException( "Queue is empty");
+		if(isEmpty()) throw new RuntimeException("Queue is empty");		
 		return first.data;
 	}
 	
@@ -28,13 +36,13 @@ public class _Queue {
 	
 	public void add(int data) {
 		Node node = new Node(data);
-		if( isEmpty() ) {
+		if(isEmpty()) {
 			first = node;
-			last = node;
+			last = node;		 
 		} else {
 			last.next = node;
 			last = node;
 		}
 	}
-
+	
 }
