@@ -1,8 +1,8 @@
 package ds;
 
-// Time: 3:35
+// Time: 2:42
 
-public class A_BinarySearch_03 {
+public class A_BinarySearchTree_06 {
 
 	static class Node{
 		int data;
@@ -35,7 +35,7 @@ public class A_BinarySearch_03 {
 	}
 	
 	private Node insert(Node parent, int data, int height) {
-		height++;
+		height ++;
 		if(parent == null) {
 			parent = new Node(data, height);
 		}else {
@@ -47,5 +47,6 @@ public class A_BinarySearch_03 {
 		}
 		return parent;
 	}
+	
 	
 }

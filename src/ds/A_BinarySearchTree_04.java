@@ -2,7 +2,7 @@ package ds;
 
 // Time: 2:59
 
-public class A_BinarySearch_04 {
+public class A_BinarySearchTree_04 {
 
 	static class Node{
 		int data;
