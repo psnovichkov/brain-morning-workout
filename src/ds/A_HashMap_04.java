@@ -2,7 +2,7 @@ package ds;
 
 // Time: 5:44
 
-public class A_HashTable_04<K,V>{
+public class A_HashMap_04<K,V>{
 
 	private final static int DEFAULT_CAPACITY = 100;
 	
@@ -23,13 +23,13 @@ public class A_HashTable_04<K,V>{
 	private int size;
 	
 	@SuppressWarnings("unchecked")
-	public A_HashTable_04(int capacity) {
+	public A_HashMap_04(int capacity) {
 		this.capacity = capacity;
 		values = new Item[capacity];
 		size = 0;
 	}
 	
-	public A_HashTable_04() {
+	public A_HashMap_04() {
 		this(DEFAULT_CAPACITY);
 	}
 	
