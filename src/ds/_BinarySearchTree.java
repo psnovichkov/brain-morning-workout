@@ -33,11 +33,10 @@ public class _BinarySearchTree {
 	}
 	
 	private Node insert(Node parent, int data, int height) {
-		height++;
 		if(parent == null) {
-			parent = new Node(data, height);
+			parent = new Node(data, height++);
 		} else {
-			if(parent.data <= data) {
+			if(data <= parent.data) {
 				parent.left = insert(parent.left, data, height);
 			} else {
 				parent.right = insert(parent.right, data, height);				
