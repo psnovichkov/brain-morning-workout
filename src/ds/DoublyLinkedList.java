@@ -2,6 +2,11 @@ package ds;
 
 import ds.node.DLNode;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class DoublyLinkedList {
 	DLNode first;
 	DLNode last;

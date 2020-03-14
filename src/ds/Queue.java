@@ -2,6 +2,11 @@ package ds;
 
 import ds.node.Node;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class Queue {
 	Node first;
 	Node last;

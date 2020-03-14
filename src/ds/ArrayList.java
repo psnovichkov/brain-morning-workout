@@ -1,5 +1,10 @@
 package ds;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class ArrayList {
 
 	private final static int DEFAULT_CAPACITY = 100;
