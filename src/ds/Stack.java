@@ -2,6 +2,11 @@ package ds;
 
 import ds.node.Node;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class Stack {
 	Node top;
 		

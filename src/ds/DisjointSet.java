@@ -7,6 +7,11 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class DisjointSet {
 	private int[] parents;
 	private int[] ranks;	

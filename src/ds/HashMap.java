@@ -1,5 +1,10 @@
 package ds;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class HashMap<K,V> {
 	public static final int DEFAULT_CAPACITY = 1000;
 	

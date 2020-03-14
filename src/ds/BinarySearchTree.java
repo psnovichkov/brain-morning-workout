@@ -1,5 +1,10 @@
 package ds;
 
+/**
+ * 
+ * @author psnovichkov
+ *
+ */
 public class BinarySearchTree {
 	
 	static class Node{
