@@ -1,4 +1,4 @@
-package src.ds.doubly_linked_list;
+package ds.doubly_linked_list;
 
 
 import ds.node.DLNode;

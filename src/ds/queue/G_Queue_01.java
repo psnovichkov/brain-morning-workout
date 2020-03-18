@@ -1,4 +1,4 @@
-package src.ds.queue;
+package ds.queue;
 
 import ds.node.Node;
 

@@ -1,4 +1,4 @@
-package src.ds.stack;
+package ds.stack;
 
 public class O_Stack_01 {
 }

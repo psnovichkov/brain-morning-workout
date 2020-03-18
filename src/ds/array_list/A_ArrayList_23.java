@@ -1,4 +1,4 @@
-package src.ds.array_list;
+package ds.array_list;
 
 public class A_ArrayList_23 {
 
