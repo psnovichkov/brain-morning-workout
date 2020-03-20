@@ -1,4 +1,4 @@
-package src.ds.array_list;
+package ds.array_list;
 
 //Time: 3:53
 

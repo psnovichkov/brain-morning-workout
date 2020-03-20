@@ -1,4 +1,4 @@
-package src.ds.queue;
+package ds.queue;
 
 // 1:27
 

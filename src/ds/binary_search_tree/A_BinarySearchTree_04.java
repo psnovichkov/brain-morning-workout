@@ -1,4 +1,4 @@
-package src.ds.binary_search_tree;
+package ds.binary_search_tree;
 
 // Time: 2:59
 

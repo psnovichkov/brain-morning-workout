@@ -1,4 +1,4 @@
-package src.ds.stack;
+package ds.stack;
 
 import ds.node.Node;
 
