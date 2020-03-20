@@ -5,9 +5,20 @@ package ds;
  * @author psnovichkov
  *
  */
+
+
+/**  
+ * 
+ * @author psnovichkov
+ *
+ */
+
+
 public class MinHeap {
+	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2; 	
-	private static int ROOT_INDEX = 1;
+	private final static int ROOT_INDEX = 1;
+	
 	private int[] values;
 	private int size;
 	private int capacity;
@@ -17,6 +28,11 @@ public class MinHeap {
 		this.values = new int[this.capacity];
 		this.size = 0;				
 	}
+	
+	public MinHeap() {
+		this(DEFAULT_CAPACITY);
+	}
+
 	
 	public int size() {
 		return size;
@@ -59,13 +75,12 @@ public class MinHeap {
 				minIndex = rightIndex;
 			}
 			
-			if( values[pIndex] < values[minIndex] ) break; 			
+			if( values[pIndex] <= values[minIndex] ) break; 			
 			swap(pIndex, minIndex);
 			pIndex = minIndex;
 			leftIndex = pIndex *2;
 			rightIndex = leftIndex + 1;
-		}
-		
+		}		
 	}
 	
 	private void heapifyUp() {
