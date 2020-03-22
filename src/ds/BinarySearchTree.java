@@ -9,12 +9,10 @@ public class BinarySearchTree {
 	
 	static class Node{
 		int data;
-		int height;
 		Node left;
 		Node right;
-		Node(int data, int height){
+		Node(int data){
 			this.data = data;
-			this.height = height;
 		}
 	}
 	
@@ -34,17 +32,17 @@ public class BinarySearchTree {
 
 	
 	public void insert(int data) {
-		root = insert(root, data, 0);
+		root = insert(root, data);
 	}
 	
-	private Node insert(Node parent, int data, int height) {
+	private Node insert(Node parent, int data) {
 		if(parent == null) {
-			parent = new Node(data, height++);
+			parent = new Node(data);
 		} else {
 			if(data <= parent.data) {
-				parent.left = insert(parent.left, data, height);
+				parent.left = insert(parent.left, data);
 			} else {
-				parent.right = insert(parent.right, data, height);				
+				parent.right = insert(parent.right, data);				
 			}
 		}
 		return parent;
