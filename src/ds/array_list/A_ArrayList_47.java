@@ -39,7 +39,7 @@ public class A_ArrayList_47 {
 			capacity *= EXPAND_FACTOR;
 			int[] tmp = new int[capacity];
 			System.arraycopy(values, 0, tmp, 0, size);
-			values = tmp;s
+			values = tmp;
 		}
 	}
 }
