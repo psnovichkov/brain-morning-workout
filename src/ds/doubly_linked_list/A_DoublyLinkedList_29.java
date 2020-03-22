@@ -2,9 +2,7 @@ package ds.doubly_linked_list;
 
 import ds.node.DLNode;
 
-// Time: 2:25:
-
-public class A_DoublyLinkedList_28 {
+public class A_DoublyLinkedList_29 {
 
 	DLNode head;
 	DLNode tail;
@@ -57,10 +55,9 @@ public class A_DoublyLinkedList_28 {
 			head = head.next;
 		}
 		return v;
-		
 	}
 	
-	public int removeLast() {
+	public int removeLadt() {
 		int v = peekLast();
 		if(head == tail) {
 			head = null;
@@ -83,6 +80,7 @@ public class A_DoublyLinkedList_28 {
 	public void add(int v) {
 		addLast(v);
 	}
+	
 	
 	
 }

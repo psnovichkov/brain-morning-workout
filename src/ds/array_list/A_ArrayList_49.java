@@ -1,6 +1,6 @@
 package ds.array_list;
 
-public class A_ArrayList_47 {
+public class A_ArrayList_49 {
 
 	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2;
@@ -9,13 +9,13 @@ public class A_ArrayList_47 {
 	private int capacity;
 	private int size;
 	
-	public A_ArrayList_47(int capacity){
+	public A_ArrayList_49(int capacity) {
 		this.capacity = capacity;
 		values = new int[capacity];
 		size = 0;
-	}	
+	}
 	
-	public A_ArrayList_47() {
+	public A_ArrayList_49() {
 		this(DEFAULT_CAPACITY);
 	}
 	
@@ -25,8 +25,7 @@ public class A_ArrayList_47 {
 	
 	public void add(int v) {
 		ensureCapacity();
-		values[size] = v;
-		size++;
+		values[size++] = v;
 	}
 	
 	public int get(int index) {
@@ -39,7 +38,8 @@ public class A_ArrayList_47 {
 			capacity *= EXPAND_FACTOR;
 			int[] tmp = new int[capacity];
 			System.arraycopy(values, 0, tmp, 0, size);
-			values = tmp;s
+			values = tmp;
 		}
 	}
+	
 }
