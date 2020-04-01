@@ -1,6 +1,6 @@
 package ds.min_heap;
 
-public class A_MinHeap_03 {
+public class A_MinHeap_04 {
 
 	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2;
@@ -10,13 +10,13 @@ public class A_MinHeap_03 {
 	private int capacity;
 	private int size;
 	
-	public A_MinHeap_03(int capacity) {
+	public A_MinHeap_04(int capacity) {
 		this.capacity = capacity;
 		values = new int[capacity];
 		size = 0;
 	}
 	
-	public A_MinHeap_03() {
+	public A_MinHeap_04() {
 		this(DEFAULT_CAPACITY);
 	}
 	
@@ -39,9 +39,20 @@ public class A_MinHeap_03 {
 	public int poll() {
 		int v = peek();
 		values[ROOT_INDEX] = values[lastIndex()];
-		size--;
+		size --;
 		heapifyDown();
 		return v;
+	}
+	
+	private void heapifyUp() {
+		int cIndex = lastIndex();
+		int pIndex = cIndex / 2;
+		
+		while(validIndex(pIndex) && values[cIndex] < values[pIndex]) {
+			swap(pIndex, cIndex);
+			cIndex = pIndex;
+			pIndex = cIndex / 2;
+		}
 	}
 	
 	private void heapifyDown() {
@@ -51,26 +62,15 @@ public class A_MinHeap_03 {
 		
 		while(validIndex(leftIndex)) {
 			int minIndex = leftIndex;
-			if(validIndex(rightIndex) && values[rightIndex] < values[leftIndex]) {
+			if(validIndex(rightIndex) && values[rightIndex] < values[rightIndex]) {
 				minIndex = rightIndex;
 			}
 			
-			if(values[pIndex] <= values[minIndex]) break;
+			if(values[pIndex] < values[minIndex]) break;
 			swap(pIndex, minIndex);
 			pIndex = minIndex;
 			leftIndex = pIndex * 2;
 			rightIndex = leftIndex + 1;
-		}
-	}
-	
-	private void heapifyUp() {
-		int cIndex = lastIndex();
-		int pIndex = cIndex / 2;
-		
-		while(validIndex(pIndex) && values[pIndex] < values[cIndex]) {
-			swap(pIndex, cIndex);
-			cIndex = pIndex;
-			pIndex = cIndex / 2;
 		}
 	}
 	
