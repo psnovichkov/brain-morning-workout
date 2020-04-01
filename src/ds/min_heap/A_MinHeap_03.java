@@ -1,6 +1,6 @@
 package ds.min_heap;
 
-public class A_MinHeap_02 {
+public class A_MinHeap_03 {
 
 	private final static int DEFAULT_CAPACITY = 100;
 	private final static int EXPAND_FACTOR = 2;
@@ -10,13 +10,13 @@ public class A_MinHeap_02 {
 	private int capacity;
 	private int size;
 	
-	public A_MinHeap_02(int capacity) {
+	public A_MinHeap_03(int capacity) {
 		this.capacity = capacity;
 		values = new int[capacity];
 		size = 0;
 	}
 	
-	public A_MinHeap_02() {
+	public A_MinHeap_03() {
 		this(DEFAULT_CAPACITY);
 	}
 	
@@ -46,7 +46,7 @@ public class A_MinHeap_02 {
 	
 	private void heapifyDown() {
 		int pIndex = ROOT_INDEX;
-		int leftIndex = pIndex /2;
+		int leftIndex = pIndex/2;
 		int rightIndex = leftIndex + 1;
 		
 		while(validIndex(leftIndex)) {
@@ -56,23 +56,24 @@ public class A_MinHeap_02 {
 			}
 			
 			if(values[pIndex] <= values[minIndex]) break;
-			swap(minIndex, pIndex);
+			swap(pIndex, minIndex);
 			pIndex = minIndex;
-			leftIndex = pIndex*2;
-			rightIndex = rightIndex+1;
+			leftIndex = pIndex / 2;
+			rightIndex = leftIndex + 1;
 		}
 	}
 	
 	private void heapifyUp() {
 		int cIndex = lastIndex();
-		int pIndex = cIndex / 2;
+		int pIndex = cIndex * 2;
 		
-		while(validIndex(pIndex) && values[cIndex] < values[pIndex]) {
-			swap(cIndex, pIndex);
+		while(validIndex(pIndex) && values[pIndex] < values[cIndex]) {
+			swap(pIndex, cIndex);
 			cIndex = pIndex;
-			pIndex = cIndex /2;
+			pIndex = cIndex * 2;
 		}
 	}
+	
 	
 	private boolean validIndex(int index) {
 		return index >= ROOT_INDEX && index <= lastIndex();
@@ -96,7 +97,5 @@ public class A_MinHeap_02 {
 			values = tmp;
 		}
 	}
-	
-	
 	
 }
