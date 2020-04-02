@@ -1,6 +1,6 @@
 package ds.hash_map;
 
-public class A_HashMap_26<K,V>{
+public class A_HashMap_27<K,V>{
 
 	private final static int DEFAULT_CAPACITY = 100;
 	
@@ -21,13 +21,13 @@ public class A_HashMap_26<K,V>{
 	private int size;
 	
 	@SuppressWarnings("unchecked")
-	public A_HashMap_26(int capacity) {
+	public A_HashMap_27(int capacity) {
 		this.capacity = capacity;
 		buckets = new Item[capacity];
 		size = 0;
 	}
 	
-	public A_HashMap_26() {
+	public A_HashMap_27() {
 		this(DEFAULT_CAPACITY);
 	}
 	
@@ -35,7 +35,7 @@ public class A_HashMap_26<K,V>{
 		return size;
 	}
 	
-	public int getIndex(K key) {
+	private int getIndex(K key) {
 		return key.hashCode()%capacity;
 	}
 	
@@ -47,7 +47,7 @@ public class A_HashMap_26<K,V>{
 	private Item<K,V> findItem(K key){
 		Item<K,V> item = buckets[getIndex(key)];
 		while(item != null) {
-			if(item.key == key) break;
+			if(key == item.key) break;
 			item = item.next;
 		}
 		return item;
@@ -66,6 +66,5 @@ public class A_HashMap_26<K,V>{
 			item.value = value;
 		}
 	}
-	
 	
 }
