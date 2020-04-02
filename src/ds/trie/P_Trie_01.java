@@ -8,7 +8,7 @@ package ds.trie;
  */
 public class P_Trie_01 {
 	public static final int MIN_VALUE = 'a';
-	public static final int MAX_VALUE = 'b';
+	public static final int MAX_VALUE = 'z';
 	public static final int ALPHABET_SIZE = MAX_VALUE - MIN_VALUE + 1;
 	
 	static class Node{
