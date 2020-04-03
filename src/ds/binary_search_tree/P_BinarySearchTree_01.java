@@ -18,6 +18,7 @@ public class P_BinarySearchTree_01 {
 	} 
 	
 	private Node root;
+	
 	public Node search(int data) {
 		return search(root, data);
 	}
