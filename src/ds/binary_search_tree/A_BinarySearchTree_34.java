@@ -22,7 +22,28 @@ public class A_BinarySearchTree_34 {
 	}
 	
 	private Node search(Node node, int data) {
-		if(node )
+		if(node == null) return null;
+		if(data < node.data) return search(node.left, data);
+		if(data > node.data) return search(node.right, data);
+		return node;
+	}
+	
+	public void insert(int data) {
+		root = insert(root, data, -1);
+	}
+	
+	private Node insert(Node node, int data, int height) {
+		height++;
+		if(node == null) {
+			node = new Node(data, height);
+		}else {
+			if(data <= node.data) {
+				node.left = insert(node.left, data, height);
+			}else {
+				node.right = insert(node.right, data, height);
+			}
+		}
+		return node;
 	}
 	
 	
