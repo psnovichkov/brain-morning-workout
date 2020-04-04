@@ -1,0 +1,40 @@
+package ds.trie;
+
+public class G_Trie_05 {
+
+    private static final int FIRST = 'a';
+    private static final int LAST = 'z';
+    private static final int RANGE = LAST - FIRST + 1;
+
+    static class Node {
+        boolean isWord;
+        Node[] childrent;
+    }
+
+
+    Node root = new Node();
+
+
+    public void insert(String word) {
+        Node node = root;
+        for (char c : word.toCharArray()) {
+            int index = c - FIRST;
+            if (node.childrent == null) node.childrent = new Node[RANGE];
+            if (node.childrent[index] == null) node.childrent[index] = new Node();
+            node = node.childrent[index];
+        }
+        node.isWord = true;
+    }
+
+    public boolean contains(String word) {
+        Node node = root;
+        for (char c : word.toCharArray()) {
+            int index = c - FIRST;
+            if (node.childrent == null) return false;
+            if (node.childrent[index] == null) return false;
+            node = node.childrent[index];
+        }
+        return node.isWord;
+    }
+
+}
