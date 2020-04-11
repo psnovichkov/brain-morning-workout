@@ -4,7 +4,7 @@ public class A_Trie_06 {
 
 	private final static int MIN_VALUE = 'a';
 	private final static int MAX_VALUE = 'z';
-	private final static int ALPHABET_SIZE = MIN_VALUE - MAX_VALUE;
+	private final static int ALPHABET_SIZE = MIN_VALUE - MAX_VALUE + 1;
 	
 	static class Node{
 		Node[] children;

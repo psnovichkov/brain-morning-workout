@@ -1,14 +1,14 @@
 package ds.trie;
 
-public class A_Trie_08 {
+public class A_Trie_09 {
 
 	private final static int MIN_VALUE = 'a';
 	private final static int MAX_VALUE = 'z';
-	private final static int ALPHABET_SIZE = MAX_VALUE - MIN_VALUE + 1;
+	private final static int ALPHABET_SIZE = MAX_VALUE - MIN_VALUE;
 	
 	static class Node{
 		Node[] children;
-		boolean isWordEnd;
+		boolean isWordEnd; 
 	}
 	
 	private Node root = new Node();
@@ -25,7 +25,6 @@ public class A_Trie_08 {
 			}
 			node = node.children[index];
 		}
-		
 		node.isWordEnd = true;
 	}
 	
