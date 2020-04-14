@@ -1,6 +1,6 @@
 package ds.binary_search_tree;
 
-public class G_BinaryTreeSearch_10 {
+public class G_BinarySearchTree_12 {
 
     static class Node{
         int val;
