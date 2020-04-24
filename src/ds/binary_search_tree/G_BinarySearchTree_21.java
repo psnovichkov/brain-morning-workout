@@ -1,6 +1,6 @@
 package ds.binary_search_tree;
 
-public class G_BinarySearchTree_20 {
+public class G_BinarySearchTree_21 {
 
     static class Node {
         Node left;
@@ -22,9 +22,9 @@ public class G_BinarySearchTree_20 {
         if (par == null) par = new Node(data);
         else if (data < par.data) par.left = insert(par.left, data);
         else if (data > par.data) par.right = insert(par.right, data);
-
         return par;
     }
+
 
     public Node search(int data) {
         return search(root, data);
@@ -36,6 +36,4 @@ public class G_BinarySearchTree_20 {
         else if (data > par.data) return search(par.right, data);
         return par;
     }
-
-
 }
