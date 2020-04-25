@@ -2,7 +2,7 @@ package ds.queue;
 
 import ds.node.Node;
 
-public class G_Queue_05 {
+public class G_Queue_06 {
 
     Node first;
     Node last;
@@ -12,7 +12,7 @@ public class G_Queue_05 {
     }
 
     public int peek() {
-        if (isEmpty()) throw new RuntimeException("Queue is Empty");
+        if (isEmpty()) throw new RuntimeException("Queue isEmpty");
         return first.data;
     }
 
@@ -37,6 +37,5 @@ public class G_Queue_05 {
             last = node;
         }
     }
-
 
 }
