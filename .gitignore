@@ -30,7 +30,7 @@ hs_err_pid*
 .project
 
 # IDEA project files
-.idea/
+.idea
 *.iml
 
 # OS
