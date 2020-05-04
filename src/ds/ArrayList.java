@@ -5,6 +5,7 @@ package ds;
  * @author psnovichkov
  *
  */
+
 public class ArrayList {
 
     private final static int DEFAULT_CAPACITY = 100;
@@ -48,6 +49,10 @@ public class ArrayList {
             System.arraycopy(values, 0, temp, 0, size);
             values = temp;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Hello world");
     }
 
 }
