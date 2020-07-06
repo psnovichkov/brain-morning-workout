@@ -2,7 +2,7 @@ package ds.queue;
 
 import ds.node.Node;
 
-public class A_Queue_84 {
+public class A_Queue_85 {
 
     Node top;
     Node bottom;
