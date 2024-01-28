@@ -4,28 +4,24 @@ const Node = function(value){
 }
 
 const Stack = function (){
-    this.top = null
-    const isEmpty = function(){
+    this.top = null;
+    this.isEmpty = function(){
         return this.top == null;
     }
-    const push = function(value){
+    this.push = function(value){
         let newNode = new Node(value);
         newNode.next = this.top;
         this.top = newNode;
     }
-    const poll = function(){
+    this.poll = function(){
         let output = this.peek();
         this.top = this.top.next;
         return output;
     }
-    const peek = function(){
-        if(this.isEmpty){
-        throw new Error("stack is empty");
+    this.peek = function(){
+        if(this.isEmpty()){
+            throw new Error("stack is empty");
         }
         return this.top.value;
     }
 }
-
-let stack = new Stack();
-stack.push("3");
-console.log(stack.peek());
