@@ -1,7 +1,4 @@
-const Node = function(value){
-    this.value = value;
-    this.next = null;
-}
+import Node from "../node/Node.js"
 
 const Stack = function (){
     this.top = null;
@@ -22,6 +19,8 @@ const Stack = function (){
         if(this.isEmpty()){
             throw new Error("stack is empty");
         }
-        return this.top.value;
+        return this.top.data;
     }
 }
+
+export default Stack;
